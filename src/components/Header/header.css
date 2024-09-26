@@ -1,0 +1,12 @@
+a.active {
+    border: 2px solid #23BE0A;
+    border-radius: 10px;
+    color: #23BE0A;
+    background-color: #fff;
+    font-weight: 600;
+}
+
+a {
+    border: 2px solid white;
+    font-weight: 600;
+}

@@ -1,0 +1,172 @@
+[
+    {
+        "bookId": 1,
+        "bookName": "The Secrets of the Universe",
+        "author": "John Maxwell",
+        "image": "https://i.ibb.co.com/WW2LHMp/ea95a988434051-5dd5f398ba67d-removebg-preview-1.png",
+        "review": "A compelling exploration of the cosmos, blending science and philosophy to uncover the mysteries of the universe. Maxwell’s deep dive into astronomical phenomena and their connections to human life provides both intellectual stimulation and personal insight. It's a great read for anyone curious about space and our place in it.",
+        "totalPages": 320,
+        "rating": 4.8,
+        "category": "Science",
+        "tags": [
+            "Cosmology",
+            "Philosophy",
+            "Astronomy"
+        ],
+        "publisher": "HarperCollins",
+        "yearOfPublishing": 2022
+    },
+    {
+        "bookId": 2,
+        "bookName": "Cooking Made Simple",
+        "author": "Ella Johnson",
+        "image": "https://i.ibb.co.com/WW2LHMp/ea95a988434051-5dd5f398ba67d-removebg-preview-1.png",
+        "review": "This cookbook is perfect for beginners and seasoned cooks alike. With easy-to-follow recipes and plenty of helpful tips, Ella Johnson makes cooking a breeze. The layout is clean, and the recipes are well-organized, making it a pleasure to cook from. Highly recommended for anyone looking to improve their kitchen skills.",
+        "totalPages": 180,
+        "rating": 4.5,
+        "category": "Cooking",
+        "tags": [
+            "Recipes",
+            "Easy Cooking",
+            "Beginner Friendly"
+        ],
+        "publisher": "Penguin Books",
+        "yearOfPublishing": 2020
+    },
+    {
+        "bookId": 3,
+        "bookName": "Journey Through Time",
+        "author": "Michael Trent",
+        "image": "https://i.ibb.co.com/WW2LHMp/ea95a988434051-5dd5f398ba67d-removebg-preview-1.png",
+        "review": "Trent takes readers on a historical adventure, blending fiction with facts to create a gripping narrative. The book covers key moments in history while weaving a tale of intrigue and mystery. It’s perfect for those who enjoy historical fiction with a touch of adventure.",
+        "totalPages": 450,
+        "rating": 4.7,
+        "category": "Historical Fiction",
+        "tags": [
+            "History",
+            "Adventure",
+            "Mystery"
+        ],
+        "publisher": "Random House",
+        "yearOfPublishing": 2018
+    },
+    {
+        "bookId": 4,
+        "bookName": "Mastering JavaScript",
+        "author": "Sarah Lee",
+        "image": "https://i.ibb.co.com/WW2LHMp/ea95a988434051-5dd5f398ba67d-removebg-preview-1.png",
+        "review": "For developers looking to deepen their knowledge of JavaScript, this book is a must-read. Lee covers everything from basic syntax to advanced concepts, with practical examples that make learning engaging. It's a valuable resource for both beginners and experienced developers.",
+        "totalPages": 500,
+        "rating": 4.9,
+        "category": "Programming",
+        "tags": [
+            "JavaScript",
+            "Coding",
+            "Web Development"
+        ],
+        "publisher": "O'Reilly Media",
+        "yearOfPublishing": 2021
+    },
+    {
+        "bookId": 5,
+        "bookName": "The Art of Mindfulness",
+        "author": "Rebecca Hall",
+        "image": "https://i.ibb.co.com/WW2LHMp/ea95a988434051-5dd5f398ba67d-removebg-preview-1.png",
+        "review": "This beautifully written book guides readers through the practice of mindfulness in everyday life. Hall’s practical approach to mindfulness, combined with her soothing writing style, makes it an essential read for those looking to reduce stress and live more mindfully.",
+        "totalPages": 250,
+        "rating": 4.6,
+        "category": "Self-Help",
+        "tags": [
+            "Mindfulness",
+            "Mental Health",
+            "Wellness"
+        ],
+        "publisher": "Simon & Schuster",
+        "yearOfPublishing": 2019
+    },
+    {
+        "bookId": 6,
+        "bookName": "The Digital Revolution",
+        "author": "Daniel Carter",
+        "image": "https://i.ibb.co.com/WW2LHMp/ea95a988434051-5dd5f398ba67d-removebg-preview-1.png",
+        "review": "Carter provides an in-depth analysis of how technology is reshaping industries and society. From AI to blockchain, this book offers a comprehensive overview of the digital landscape. A thought-provoking read for anyone interested in the future of technology.",
+        "totalPages": 300,
+        "rating": 4.3,
+        "category": "Technology",
+        "tags": [
+            "AI",
+            "Blockchain",
+            "Future"
+        ],
+        "publisher": "McGraw-Hill",
+        "yearOfPublishing": 2020
+    },
+    {
+        "bookId": 7,
+        "bookName": "Gardening for Beginners",
+        "author": "Emma Davis",
+        "image": "https://i.ibb.co.com/WW2LHMp/ea95a988434051-5dd5f398ba67d-removebg-preview-1.png",
+        "review": "A fantastic guide for new gardeners, covering everything from choosing the right plants to maintaining a healthy garden. Davis explains the basics in an easy-to-understand way, making gardening approachable for all skill levels. The book is full of useful tips and lovely illustrations.",
+        "totalPages": 220,
+        "rating": 4.2,
+        "category": "Gardening",
+        "tags": [
+            "Plants",
+            "Home Gardening",
+            "Outdoor"
+        ],
+        "publisher": "DK Publishing",
+        "yearOfPublishing": 2017
+    },
+    {
+        "bookId": 8,
+        "bookName": "The Entrepreneur’s Playbook",
+        "author": "Steve Barker",
+        "image": "https://i.ibb.co.com/WW2LHMp/ea95a988434051-5dd5f398ba67d-removebg-preview-1.png",
+        "review": "This book offers a step-by-step guide to starting and growing a successful business. Barker provides clear advice on everything from creating a business plan to marketing and scaling operations. It’s packed with real-life examples and practical tips, making it invaluable for aspiring entrepreneurs.",
+        "totalPages": 280,
+        "rating": 4.7,
+        "category": "Business",
+        "tags": [
+            "Entrepreneurship",
+            "Startups",
+            "Business Growth"
+        ],
+        "publisher": "Wiley",
+        "yearOfPublishing": 2021
+    },
+    {
+        "bookId": 9,
+        "bookName": "The Last Kingdom",
+        "author": "Bernard Cornwell",
+        "image": "https://i.ibb.co.com/WW2LHMp/ea95a988434051-5dd5f398ba67d-removebg-preview-1.png",
+        "review": "Cornwell’s historical fiction is as gripping as ever, with richly drawn characters and immersive settings. 'The Last Kingdom' brings readers into the world of 9th-century England, telling a story of war, loyalty, and ambition. It’s a thrilling read for history buffs and fiction lovers alike.",
+        "totalPages": 350,
+        "rating": 4.8,
+        "category": "Historical Fiction",
+        "tags": [
+            "Vikings",
+            "England",
+            "Medieval"
+        ],
+        "publisher": "HarperCollins",
+        "yearOfPublishing": 2015
+    },
+    {
+        "bookId": 10,
+        "bookName": "A World Without You",
+        "author": "Beth Revis",
+        "image": "https://i.ibb.co.com/WW2LHMp/ea95a988434051-5dd5f398ba67d-removebg-preview-1.png",
+        "review": "A poignant and emotional read that explores mental health and the complexities of love and loss. Revis crafts a touching story about a boy who believes he can travel through time, and the impact this belief has on his relationships. It’s a beautifully written, heart-wrenching tale that stays with you long after the final page.",
+        "totalPages": 400,
+        "rating": 4.4,
+        "category": "Young Adult",
+        "tags": [
+            "Mental Health",
+            "Romance",
+            "Time Travel"
+        ],
+        "publisher": "Razorbill",
+        "yearOfPublishing": 2016
+    }
+]
