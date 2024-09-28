@@ -8,6 +8,7 @@ import PageToRead from './components/PageToRead/PageToRead.jsx';
 import ErrorPage from './components/ErrorPage.jsx';
 import Root from './components/Root/Root.jsx';
 import BookDetails from './components/Home/Books/BookDetails.jsx';
+import MyChoice from './components/Home/MyChoice/MyChoice.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,17 +21,32 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
+        path: "/myChoice",
+        element: <MyChoice />,
+        children: [
+          {
+            path: "/myChoice/wish",
+            element: <div>Wished</div>,
+          },
+          {
+            path: "/myChoice/read",
+            element: <div>Read</div>,
+          },
+        ]
+      },
+      {
         path: "/liBooks",
         element: <ListedBooks />
       },
       {
         path: "/ptRead",
-        element: <PageToRead />
+        element: <PageToRead />,
+        loader: () => fetch("/data.json")
       },
       {
         path: "/book/:id",
-        loader: () => fetch("data.json"),
-        element: <BookDetails />
+        element: <BookDetails />,
+        loader: () => fetch("/data.json")
       },
     ]
   },

@@ -5,15 +5,15 @@ import { HandleContext } from '../../Root/Root';
 
 
 export default function BookDetails() {
+  const data = useLoaderData();
   const handle = useContext(HandleContext)
   const { id } = useParams();
   const intId = parseInt(id)
-  const data = useLoaderData();
 
-  const bookData = data.find(book => book.bookId === intId);
+  const bookData = data?.find(book => book.bookId === intId);
 
   const { bookId, bookName, image, author, totalPages, category, tags, review, rating, publisher, yearOfPublishing } = bookData;
-  const {handleRead, handleWished} = handle;
+  const { handleRead, handleWished } = handle;
 
   return (
     <div className='flex gap-10 my-20'>
@@ -37,7 +37,7 @@ export default function BookDetails() {
           <p className='relative'>Year of publishing:<span className='font-semibold absolute left-44'> {yearOfPublishing}</span></p>
           <p className='relative'>Rating:<span className='font-semibold absolute left-44'> {rating}</span></p>
         </div>
-        <button onClick={()=> handleRead()} className="btn btn-outline btn-accent me-3">Read</button>
+        <button onClick={() => handleRead(intId)} className="btn btn-outline btn-accent me-3">Read</button>
         <button onClick={() => handleWished(bookId)} className="btn btn-info" >Wish List</button>
       </div>
     </div>

@@ -1,31 +1,39 @@
-import React, { createContext } from 'react'
+import React, { createContext, useState } from 'react'
 import Header from '../Header/Header'
 import { Outlet } from 'react-router-dom'
 import toast, { Toaster } from 'react-hot-toast';
 
 export const HandleContext = createContext("")
-
-const handleWished = id => {
-  console.log(id)
-  toast.success("Wished")
-}
-const handleRead = id => {
-  console.log(id)
-  toast.success("Read")
-}
-
-const handle = { handleRead, handleWished }
-console.log(handle)
-
+export const WishedContext = createContext("")
 
 
 export default function Root() {
+  const [wishes, SetWishes] = useState([])
+
+  const handleWished = id => {
+
+    const preId = wishes.find(newId => newId === id);
+    if (preId) {
+      return toast.error("Already as wished");
+    }
+
+    SetWishes([...wishes, id])
+    toast.success("Wished")
+  }
+
+  const handleRead = id => {
+    toast.success("Read")
+  }
+
+  const handle = { handleRead, handleWished }
 
   return (
     <HandleContext.Provider value={handle}>
-      <Toaster />
-      <Header />
-      <Outlet />
+      <WishedContext.Provider value={wishes}>
+        <Toaster />
+        <Header />
+        <Outlet />
+      </WishedContext.Provider>
     </HandleContext.Provider>
   )
 }
