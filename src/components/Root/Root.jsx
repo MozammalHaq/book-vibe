@@ -5,10 +5,12 @@ import toast, { Toaster } from 'react-hot-toast';
 
 export const HandleContext = createContext("")
 export const WishedContext = createContext("")
+export const ReadContext = createContext("")
 
 
 export default function Root() {
   const [wishes, SetWishes] = useState([])
+  const [reads, setReads] = useState([])
 
   const handleWished = id => {
 
@@ -21,7 +23,12 @@ export default function Root() {
     toast.success("Wished")
   }
 
-  const handleRead = id => {
+  const handleRead = book => {
+    const added = reads.find(read => read.bookId === book.bookId)
+    if(added) {
+      return toast.error("Already as Read");
+    }
+    setReads([...reads, book])
     toast.success("Read")
   }
 
@@ -30,9 +37,11 @@ export default function Root() {
   return (
     <HandleContext.Provider value={handle}>
       <WishedContext.Provider value={wishes}>
-        <Toaster />
-        <Header />
-        <Outlet />
+        <ReadContext.Provider value={reads}>
+          <Toaster />
+          <Header />
+          <Outlet />
+        </ReadContext.Provider>
       </WishedContext.Provider>
     </HandleContext.Provider>
   )

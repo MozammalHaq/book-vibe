@@ -23,16 +23,6 @@ const router = createBrowserRouter([
       {
         path: "/myChoice",
         element: <MyChoice />,
-        children: [
-          {
-            path: "/myChoice/wish",
-            element: <div>Wished</div>,
-          },
-          {
-            path: "/myChoice/read",
-            element: <div>Read</div>,
-          },
-        ]
       },
       {
         path: "/liBooks",

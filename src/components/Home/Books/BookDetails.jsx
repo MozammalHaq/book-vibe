@@ -37,7 +37,7 @@ export default function BookDetails() {
           <p className='relative'>Year of publishing:<span className='font-semibold absolute left-44'> {yearOfPublishing}</span></p>
           <p className='relative'>Rating:<span className='font-semibold absolute left-44'> {rating}</span></p>
         </div>
-        <button onClick={() => handleRead(intId)} className="btn btn-outline btn-accent me-3">Read</button>
+        <button onClick={() => handleRead(bookData)} className="btn btn-outline btn-accent me-3">Read</button>
         <button onClick={() => handleWished(bookId)} className="btn btn-info" >Wish List</button>
       </div>
     </div>
