@@ -1,6 +1,4 @@
-import { useContext, useState } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
-import { ReadContext } from '../Root/Root';
 import { useLoaderData } from 'react-router-dom';
 import { getStoredReadBook } from '../../utility/fn';
 
@@ -22,7 +20,6 @@ const TriangleBar = (props) => {
 
 
 export default function PageToRead() {
-  // const readBook = useContext(ReadContext);
   const bookData = useLoaderData();
   const readBookId = getStoredReadBook();
 

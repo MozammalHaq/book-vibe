@@ -5,11 +5,9 @@ import toast, { Toaster } from 'react-hot-toast';
 import { getStoredReadBook, getStoredWishedBook, saveReadBook, saveWishedBook } from '../../utility/fn';
 
 export const HandleContext = createContext("")
-export const ReadContext = createContext("")
 
 
 export default function Root() {
-  const [reads, setReads] = useState([])
 
   const handleWished = id => {
 
@@ -23,14 +21,14 @@ export default function Root() {
     toast.success("Wished")
   }
 
-  const handleRead = book => {
+  const handleRead = id => {
     const readId = getStoredReadBook();
-    const added = readId.find(read => read.bookId === book.bookId)
-    if(added) {
+    const added = readId.find(loId => loId === id)
+    // console.log(added)
+    if (added) {
       return toast.error("Already as Read");
     }
-    saveReadBook(book.bookId);
-    setReads([...reads, book])
+    saveReadBook(id);
     toast.success("Read")
   }
 
@@ -38,13 +36,9 @@ export default function Root() {
 
   return (
     <HandleContext.Provider value={handle}>
-      {/* <WishedContext.Provider value={wishes}> */}
-        <ReadContext.Provider value={reads}>
-          <Toaster />
-          <Header />
-          <Outlet />
-        </ReadContext.Provider>
-      {/* </WishedContext.Provider> */}
+      <Toaster />
+      <Header />
+      <Outlet />
     </HandleContext.Provider>
   )
 }
