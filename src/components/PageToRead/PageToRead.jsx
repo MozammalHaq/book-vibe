@@ -1,6 +1,8 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { ReadContext } from '../Root/Root';
+import { useLoaderData } from 'react-router-dom';
+import { getStoredReadBook } from '../../utility/fn';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
@@ -20,25 +22,29 @@ const TriangleBar = (props) => {
 
 
 export default function PageToRead() {
-  const readBook = useContext(ReadContext);
+  // const readBook = useContext(ReadContext);
+  const bookData = useLoaderData();
+  const readBookId = getStoredReadBook();
+
+  const filteredBooks = bookData?.filter(book => readBookId.includes(book.bookId));
 
   function createAcronym(phrase) {
     const wordsArray = phrase.split(' ');
     return wordsArray.map(word => word.charAt(0).toLowerCase()).join('');
   }
 
-  const data = readBook.map(book => ({
-    name: createAcronym(book.bookName),  
-    uv: book.totalPages,      
-    pv: 2400,        
-    amt: 2400         
+  const data = filteredBooks.map(book => ({
+    name: createAcronym(book.bookName),
+    uv: book.totalPages,
+    pv: 2400,
+    amt: 2400
   }));
 
-  
+
   return (
     <div className='flex justify-center items-center mt-20'>
       <BarChart
-        width={readBook.length === 1 ? 100 : readBook.length * 100}
+        width={filteredBooks.length === 1 ? 100 : filteredBooks.length * 100}
         height={300}
         data={data}
         margin={{
